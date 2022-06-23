@@ -1,0 +1,17 @@
+input{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(11, 11, 11);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input[type=text]:focus {
+    border: 3px rgb(100, 100, 101);
+}
+
+.typeahead-component {
+    
+}

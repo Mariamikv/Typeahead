@@ -1,0 +1,12 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 10em;
+}
+
+.title{
+    color: black;
+}
