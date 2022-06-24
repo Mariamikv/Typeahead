@@ -1,27 +1,12 @@
 import Header from './components/Header'
-import AutoComplete from './components/AutoComplete';
 import './App.css';
-import Listing from './components/Listing';
+import FetchData from './components/FetchData';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <AutoComplete
-        suggestions={[
-          "Alligator",
-          "Bask",
-          "Crocodilian",
-          "Death Roll",
-          "Eggs",
-          "Jaws",
-          "Reptile",
-          "Solitary",
-          "Tail",
-          "Wetlands"
-        ]}
-      />
-      <Listing />
+      <FetchData />
     </div>
   );
 }

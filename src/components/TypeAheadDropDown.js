@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import '../assets/styles/AutoComplete.css'
 
-class AutoComplete extends Component {
+class TypeAheadDropDown extends Component {
   static propTypes = {
     suggestions: PropTypes.instanceOf(Array)
   };
@@ -33,7 +33,7 @@ class AutoComplete extends Component {
     // Filter our suggestions that don't contain the user's input
     const filteredSuggestions = suggestions.filter(
       suggestion =>
-        suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+        suggestion.indexOf(userInput.toLowerCase()) > -1
     );
 
     this.setState({
@@ -100,7 +100,7 @@ class AutoComplete extends Component {
     if (showSuggestions && userInput) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <ul class="suggestions">
+          <ul className="suggestions">
             {filteredSuggestions.map((suggestion, index) => {
               let className;
 
@@ -119,7 +119,7 @@ class AutoComplete extends Component {
         );
       } else {
         suggestionsListComponent = (
-          <div class="no-suggestions">
+          <div className="no-suggestions">
             <em>No suggestions, you're on your own!</em>
           </div>
         );
@@ -129,17 +129,18 @@ class AutoComplete extends Component {
     return (
       <Fragment>
         <div className="typeahead-component">
-        <input
+
+          <input
             type="text"
             onChange={onChange}
             onKeyDown={onKeyDown}
             value={userInput}
         />
         {suggestionsListComponent}
-        </div>
+          </div>
       </Fragment>
     );
   }
 }
 
-export default AutoComplete;
+export default TypeAheadDropDown;
