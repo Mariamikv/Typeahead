@@ -28,7 +28,7 @@ function FetchData() {
             data.map((item) => ( 
             <div className="suggestions-component" key = { item.id } >
                 <img className="image-component" src={item.avatar_url} alt="avatart" />
-                <p onClick={openInNewTab(item.html_url)} > { item.login } </p>
+                <p onClick={() => openInNewTab(item.html_url)}> { item.login } </p>
                 
             </div>
                 
