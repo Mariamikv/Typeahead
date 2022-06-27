@@ -6,7 +6,7 @@ function SearchInput(props) {
   return (
     <input 
       type='text'
-      placeholder="Enter user name"
+      placeholder="Enter username"
       onChange={props.handleSearch}
     />
   )
