@@ -21,7 +21,8 @@
 }
 
 .username{
-  font-size: 0.5cm;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: black;
   text-align: left;
   margin-left: 20px;
